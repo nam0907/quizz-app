@@ -26,11 +26,11 @@ import { useNavigate,useParams } from 'react-router-dom';
           }),
       }).then((res)=>res.json("dang nhap thanh cong")).then((data)=>{
           console.log(data, "userRegister")
-          if(data==="tao tai khoan thanh cong"){
+          if(data.status==="success"){
             localStorage.setItem("isLogined",true)
             setWarning(false)
-            alert("registered")
-            navigate("/")
+            localStorage.setItem("registed",true);
+            navigate(`/${data.id}`)
           }else if(data==="account used"){
             setWarning(true);
           }

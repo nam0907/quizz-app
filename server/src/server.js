@@ -26,7 +26,7 @@ app.post("/register",async(req,res)=>{
             console.log(oldUser)
              return res.json("account used")
         }
-        await user.create({
+        const userD=await user.create({
             name: name,
             email: email,
             password: password,
@@ -39,7 +39,10 @@ app.post("/register",async(req,res)=>{
             userLibrary: [],
         }
         });
-        res.json("tao tai khoan thanh cong")
+        res.json({
+            status:'success',
+            id:userD._id,
+        })
     } catch (error) {
        res.send({"status":"error"}) 
     }
@@ -148,6 +151,63 @@ app.get('/:id/question',async(req,res)=>{
     }
 })
 
+app.get("/:id/account",async(req,res)=>{
+    try {
+        const data = await user.findById(req.params.id)
+        res.json({
+            name: data.name,
+            email: data.email,
+            password: data.password
+        });
+    } catch (error) {
+        res.json(error);
+    }
+})
+
+app.post("/:id/account/password",async(req,res)=>{
+    const {password}=req.body;
+    try {
+       await user.findByIdAndUpdate(req.params.id,{
+        $set:{
+            password:password,
+        }
+       })
+       res.json({
+        status: 'success',
+        data: await user.findById(req.params.id),
+       })
+    } catch (error) {
+        res.json(error);
+    }
+})
+
+app.post("/:id/account/name",async(req,res)=>{
+    const {name}=req.body;
+    try {
+       await user.findByIdAndUpdate(req.params.id,{
+        $set:{
+            name:name,
+        }
+       })
+       res.json({
+        status: 'success',
+        data: await user.findById(req.params.id),
+       })
+    } catch (error) {
+        res.json(error);
+    }
+})
+
+app.delete("/:id/account/deleteAccount",async(req,res)=>{
+    try {
+       await user.findByIdAndDelete(req.params.id)
+       res.json({
+        status: 'success',
+       })
+    } catch (error) {
+        res.json(error);
+    }
+})
 
 app.listen(3030, ()=>{
     console.log("listening on http://localhost:3030")

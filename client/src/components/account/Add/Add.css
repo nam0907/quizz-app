@@ -1,0 +1,38 @@
+.add-container{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.add-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    gap: 20px;
+}
+.form-add{
+    justify-items: column;
+}
+.input-add{
+    font-size: 18px;
+    padding: 5px;
+}
+.btn-add{
+    width: 80px;
+    height: 40px;
+    font-size: 19px;
+}
+.add{
+    margin:15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.label-add{
+    font-size: 23px;
+    margin-right: 10px;
+}

@@ -48,7 +48,7 @@ const Navbar = () => {
                 <button className='btn-account' onClick={()=>handleAccount()}><MdOutlineAccountCircle size={30}/></button></li>
         </ul>
         {account?(<div className='account-navbar'>
-            <Link to={`/${id}/account`} className='account-item'> <MdOutlineAccountCircle size={25}/> Account</Link>
+            <Link style={{ textDecoration: 'none' }} to={`/${id}/account`} className='account-item'> <MdOutlineAccountCircle size={25}/> Account</Link>
             <button onClick={()=>handleLogOut()} className='account-item'><MdLogout size={25}/> Log Out</button>
         </div>):(<></>)}
     </div>

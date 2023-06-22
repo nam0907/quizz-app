@@ -11,7 +11,7 @@ import Creat from './components/creat/Creat';
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import ServerError from './Errors/ServerError';
-import Account from './components/account/Account';
+import Account from './components/Account/Account';
 export default function AppRouter() {
   const Custom=()=>{
     return localStorage.getItem("isLogined")?<Content/>:<Navigate to="/"/>

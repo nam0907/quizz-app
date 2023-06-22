@@ -1,13 +1,22 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState ,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {MdOutlineMail, MdLockOutline} from "react-icons/md"
 import "../login/login.css";
+import Success from '../../Alert/Success/Success';
 const  Login=()=>{
     const navigate=useNavigate()
     const [email,setEmail]=useState("");
     const [warning, setWarning]=useState(false);
     const [password,setPassword]=useState("");
+    const [success,setSuccess]=useState(localStorage.getItem("success"))
+    const [deleted,setDeleted]=useState(localStorage.getItem("deleted"))
+  if(success===false){
+    localStorage.removeItem("success")
+  }
+  if(deleted===false){
+    localStorage.removeItem("deleted")
+  }
     const handleSubmit=(e)=>{
       e.preventDefault()
       console.log(email, password)
@@ -27,8 +36,8 @@ const  Login=()=>{
           console.log(data, "userLogin")
           if(data.status==="success"){
             localStorage.setItem("isLogined",true)
-            setWarning(false)
-            alert("Login success")
+            localStorage.setItem("success",true)
+            setSuccess(true);
             navigate(`/${data.id}`)
           }else{
             setWarning(true)
@@ -40,6 +49,8 @@ const  Login=()=>{
     }
     return(
       <div className="login">
+          {success?(<Success message={"Your account is created"} close={setSuccess}/>):(<></>)}
+          {deleted?(<Success message={"Your account is deleted"} close={setDeleted}/>):(<></>)}
           <span className='title1-login'>Welcome to Quizz</span>
           <span className='title2-login'>You need to login first</span>
           <form className="form-register" onSubmit={handleSubmit}>

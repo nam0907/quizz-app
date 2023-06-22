@@ -2,7 +2,6 @@ import React from 'react'
 import {AiFillCheckCircle} from 'react-icons/ai';
 import {MdOutlineCancel} from 'react-icons/md';
 import './Success.css';
-import { findDOMNode } from 'react-dom';
 const Success = ({message,close}) => {
   return (
     <div className='success-popup'>

@@ -9,12 +9,21 @@ import {AiOutlinePlusCircle,AiOutlineSetting} from 'react-icons/ai';
 import UserQuestion from './UserQuestion/UserQuestion';
 import UserClass from './UserClass/UserClass';
 import Explore from './Explore/Explore';
+import Success from '../../Alert/Success/Success';
 const Content = () => {
   const {id}=useParams();
   console.log(id);
   const [question,setQuestion]=useState(true);
   const [myClass,setMyClass]=useState(false);
   const [explore,setExplore]=useState(false);
+  const [success,setSuccess]=useState(localStorage.getItem("success"))
+  const [registed,setRegisted]=useState(localStorage.getItem("registed"))
+  if(registed===false){
+    localStorage.removeItem("registed")
+  }
+  if(success===false){
+    localStorage.removeItem("success")
+  }
   const handleQuestion=()=>{
     setQuestion(true)
     setMyClass(false);
@@ -33,6 +42,8 @@ const Content = () => {
   }
   return (
     <div>
+        {success?(<Success message={"Login success"} close={setSuccess}/>):(<></>)}
+        {registed?(<Success message={"Creat account success"} close={setRegisted}/>):(<></>)}
       <Navbar/>
       <div className="content-body">
         <div className="drop-menu">
