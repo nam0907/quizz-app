@@ -1,0 +1,36 @@
+.error-popup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    left: 40%;
+}
+.icon-error{
+    height:80px;
+    border-right: 8px solid #FF4457;
+}
+.message-error{
+    height:80px;
+    width:400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: #FFE1E3;
+    color:#F4888A;
+    gap:20px;
+}
+.cancel-error{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF99A4;
+    border: none;
+    height:80px;
+    width:60px;
+}

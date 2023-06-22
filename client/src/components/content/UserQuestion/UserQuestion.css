@@ -1,0 +1,215 @@
+.question{
+    width:1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.header-question{
+    width: 1050px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+}
+.question-content{
+    height:470px;
+    width:1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+}
+.content-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.content-container{
+    margin: 50px 0px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.data{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;  
+    z-index: 1;
+}
+.button{
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin: 50px 0px 0px 0px;
+}
+.btn-try{
+    width: 80px;
+    height: 30px;
+}
+.title-data{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    color: black;
+    font-size: 23px;
+    font-weight: 600;
+    border-bottom: 1px solid gray;
+    padding: 0px 0px 15px 0px;
+}
+.data-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.creat-data{
+    position: relative;
+    top: 50px;
+    left: 200px;
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 2;
+}
+.btn-add{
+    width: 80px;
+    height: 50px;
+    color: white;
+    background-color: #8854C0;
+    align-self: flex-end;
+    margin-top:20px;
+}
+.btn-done{
+    width: 80px;
+    height: 50px;
+    color: white;
+    background-color: #8854C0;
+    align-self: flex-end;
+}
+.btn-cancel{
+    width: 80px;
+    height: 80px;
+    color: #8854C0;
+    background-color: white;
+    align-self: flex-end;
+}
+.btn-create{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: #8854C0;
+    align-self: flex-end;
+    margin-right: 10px;
+}
+.btn-get{
+    width: 100px;
+    height: 50px;
+    color:#8854C0 ;
+    background-color: white;
+    align-self: flex-end;
+}
+.input-title{
+    height: 30px;
+    width: 80%;
+    align-self: center;
+}
+.input-ques{
+    display: flex;
+    flex-direction: row;
+}
+.ques-add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ques-data{
+    width:70%;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 10px;
+}
+.index{
+    align-self: flex-end ;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.header-ques{
+    align-self: flex-end ;
+}
+.ques-container{
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    padding: 10px;
+    margin:30px;
+    border: 1px solid black;
+    border-radius:8px;
+}
+.btn-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.btn-myquestion{
+    background-color:#8854C0;
+    color: white;
+    height: 50px;
+    width:130px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.form-question{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+}
+.input-question{
+    font-size: 16px;
+    height: 20px;
+    width: 200px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+.btn-question{
+    background-color: white;
+    color: #8854C0;
+    height: 40px;
+    width:80px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+}

@@ -1,0 +1,46 @@
+.drop-menu{
+    background-color: aliceblue;
+    width:25%;
+    height:550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.list-dropmenu{
+    list-style-type: none;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+.btn-dropmenu{
+    height: 60px;
+    width: 250px;
+    color: white;
+    background-color: #8854C0;
+    font-size: 18px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 28px;
+    margin-bottom: 30px;
+}
+.drop-menu-item{
+    background-color: aliceblue;
+    font-size: 20px;
+    width: 200px;
+    height:40px;
+    font-weight: 600;
+    margin-top: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border:none;
+    gap: 20px;
+}

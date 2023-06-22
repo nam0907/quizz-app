@@ -1,0 +1,39 @@
+.success-popup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    left: 40%;
+}
+.icon-success{
+    height:80px;
+    background-color: #C2F3D6;
+    color:#60AD83;
+    /* border: 2px solid #2FD473; */
+    border-right: 8px solid #2FD473;
+}
+.message-success{
+    height:80px;
+    width:400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: #C2F3D6;
+    color:green;
+    gap:20px;
+}
+.cancel-success{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #96EAB8;
+    border: none;
+    height:80px;
+    width:60px;
+}

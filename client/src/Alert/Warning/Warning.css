@@ -1,0 +1,36 @@
+.warning-popup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    left: 40%;
+}
+.icon-warning{
+    height:80px;
+    border-right: 8px solid #FDA504;
+}
+.message-warning{
+    height:80px;
+    width:400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: #FEDB9B;
+    color:#ECAE60;
+    gap:20px;
+}
+.cancel-warning{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD080;
+    border: none;
+    height:80px;
+    width:60px;
+}
